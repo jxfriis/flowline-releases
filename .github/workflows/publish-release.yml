@@ -1,0 +1,71 @@
+name: Publish verified Flowline installer
+
+on:
+  push:
+    branches: [main]
+    paths: [release-transfer.json]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: flowline-release-publish
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    env:
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    steps:
+      - name: Read release metadata from the triggering commit
+        run: |
+          gh api "repos/$GITHUB_REPOSITORY/contents/release-transfer.json?ref=$GITHUB_SHA" --jq .content | base64 --decode > metadata.json
+          node <<'NODE'
+          const fs = require('fs');
+          const m = JSON.parse(fs.readFileSync('metadata.json','utf8'));
+          if (!/^\d+\.\d+\.\d+$/.test(m.version) || !/^[a-f0-9]{64}$/.test(m.sha256)) throw Error('Invalid release metadata');
+          const url = new URL(m.sourceUrl);
+          if (url.protocol !== 'https:' || !/^[a-z0-9-]+\.trycloudflare\.com$/.test(url.hostname) || url.username || url.password || url.search || url.hash || url.pathname !== '/') throw Error('Invalid temporary artifact source');
+          if (m.releaseId && !/^\d+$/.test(String(m.releaseId))) throw Error('Invalid draft release id');
+          fs.appendFileSync(process.env.GITHUB_ENV,`VERSION=${m.version}\nFILE=Flowline_${m.version}_x64-setup.exe\nSOURCE_URL=${url.origin}\nSHA256=${m.sha256}\nRELEASE_ID=${m.releaseId || ''}\n`);
+          fs.writeFileSync('notes.md',m.notes.join('\n\n')+'\n');
+          NODE
+      - name: Download and verify the public release artifacts
+        run: |
+          curl --fail --location --retry 3 "$SOURCE_URL/$FILE" --output "$FILE"
+          curl --fail --location --retry 3 "$SOURCE_URL/$FILE.sig" --output "$FILE.sig"
+          printf '%s  %s\n' "$SHA256" "$FILE" > SHA256SUMS.txt
+          sha256sum --check SHA256SUMS.txt
+          node <<'NODE'
+          const fs = require('fs'), crypto = require('crypto');
+          const m = JSON.parse(fs.readFileSync('metadata.json','utf8'));
+          const pub = Buffer.from(m.publicKey,'base64').toString().trim().split(/\r?\n/);
+          const sig = Buffer.from(fs.readFileSync(process.env.FILE+'.sig','utf8').trim(),'base64').toString().trim().split(/\r?\n/);
+          const p = Buffer.from(pub[1],'base64'), s = Buffer.from(sig[1],'base64');
+          if (s.subarray(0,2).toString() !== 'ED' || !s.subarray(2,10).equals(p.subarray(2,10))) throw Error('Wrong update signing key');
+          const key = crypto.createPublicKey({key:Buffer.concat([Buffer.from('302a300506032b6570032100','hex'),p.subarray(10)]),format:'der',type:'spki'});
+          const digest = crypto.createHash('blake2b512').update(fs.readFileSync(process.env.FILE)).digest();
+          if (!crypto.verify(null,digest,key,s.subarray(10))) throw Error('Invalid installer signature');
+          if (!sig[2]?.startsWith('trusted comment: ') || !crypto.verify(null,Buffer.concat([s.subarray(10),Buffer.from(sig[2].slice(17))]),key,Buffer.from(sig[3],'base64'))) throw Error('Invalid signature metadata');
+          console.log('Installer checksum and updater signature verified.');
+          NODE
+      - name: Upload assets and publish the verified release
+        run: |
+          if [ -z "$RELEASE_ID" ]; then
+            RELEASE_ID=$(gh api --method POST "repos/$GITHUB_REPOSITORY/releases" -f tag_name="v$VERSION" -f name="Flowline $VERSION" -F draft=true -f body="$(cat notes.md)" --jq .id)
+          fi
+          gh api "repos/$GITHUB_REPOSITORY/releases/$RELEASE_ID" > draft.json
+          node -e 'const d=require("./draft.json"); if(!d.draft || d.tag_name!=="v"+process.env.VERSION) throw Error("Only the matching unpublished draft may be modified");'
+          for asset in "$FILE" "$FILE.sig" SHA256SUMS.txt; do
+            curl --fail-with-body --silent --show-error --request POST \
+              --header "Authorization: Bearer $GH_TOKEN" \
+              --header 'Content-Type: application/octet-stream' \
+              --data-binary "@$asset" \
+              "https://uploads.github.com/repos/$GITHUB_REPOSITORY/releases/$RELEASE_ID/assets?name=$asset" \
+              --output asset-result.json
+          done
+          gh api --method PATCH "repos/$GITHUB_REPOSITORY/releases/$RELEASE_ID" -F draft=false -f make_latest=true --jq .html_url
+
