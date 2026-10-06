@@ -1,14 +1,13 @@
 {
-  "version": "1.2.8",
+  "version": "1.2.9",
   "notes": [
-    "Stakkens fælles forbindelsesstreger er nu diskrete, stiplede og har luft omkring kort og forbindelsespunkter.",
-    "Stakke har både et fælles startpunkt og modtagepunkt, så du kan forbinde en hel stak til en anden.",
-    "Opgaver samles kun, når de trækkes ind over kortets midte. Du kan flytte forbi kanten uden at samle dem.",
-    "Windows-vinduet bruger nu et ikon i høj opløsning. Installeren opdaterer også ikoner på eksisterende genveje og proceslinjen."
+    "Forbindelser følger vandrette og lodrette ruter uden om opgavekortene med bløde, afrundede hjørner.",
+    "Stakkens stiplede forbindelsesgrene har et rent vinklet forløb med luft omkring kortene og fællespunktet.",
+    "Ruterne følger kortene, når de flyttes eller strækkes. Eksport bruger samme routing.",
+    "Eksport viser kun én forbindelse for samme relation mellem stakke, så billedet bliver mere overskueligt.",
+    "Ved flytning af kort viser en indikator målfasen. Faseskift følger musen og har en lille buffer ved grænsen, så kortene ikke skifter fase ved et uheld."
   ],
   "publicKey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFBMTExOTE4QzFDMTI3QTkKUldTcEo4SEJHQmtSR29NWHNITTgrMzNIZXJZckxjalh0T2ZtUEpuVFN6MmlkbThXOGNLRFJaZGwK",
-  "releaseId": 405085591,
-  "sha256": "28a367d9e9ec3d7bbd9fee575e333fb6207e990142d24537cbada4a8688d95fe",
-  "sourceUrl": "https://timothy-argued-whenever-got.trycloudflare.com/"
+  "sha256": "460fcd394e7daa541ef47de7ca68269ec5c9520ba34cfc327dc5559ba52fe607",
+  "sourceUrl": "https://invitations-aircraft-termination-recognized.trycloudflare.com/"
 }
-
