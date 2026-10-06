@@ -1,0 +1,14 @@
+{
+  "version": "1.2.8",
+  "notes": [
+    "Stakkens fælles forbindelsesstreger er nu diskrete, stiplede og har luft omkring kort og forbindelsespunkter.",
+    "Stakke har både et fælles startpunkt og modtagepunkt, så du kan forbinde en hel stak til en anden.",
+    "Opgaver samles kun, når de trækkes ind over kortets midte. Du kan flytte forbi kanten uden at samle dem.",
+    "Windows-vinduet bruger nu et ikon i høj opløsning. Installeren opdaterer også ikoner på eksisterende genveje og proceslinjen."
+  ],
+  "publicKey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFBMTExOTE4QzFDMTI3QTkKUldTcEo4SEJHQmtSR29NWHNITTgrMzNIZXJZckxjalh0T2ZtUEpuVFN6MmlkbThXOGNLRFJaZGwK",
+  "releaseId": 405085591,
+  "sha256": "28a367d9e9ec3d7bbd9fee575e333fb6207e990142d24537cbada4a8688d95fe",
+  "sourceUrl": "https://timothy-argued-whenever-got.trycloudflare.com/"
+}
+
