@@ -1,12 +1,10 @@
 {
-  "version": "1.2.13",
+  "version": "1.2.14",
   "notes": [
-    "Når du trækker en fase, viser en farvet placeringslinje og teksten Slip over eller Slip under præcis, hvor fasen lander. Placeringen følger den øverste eller nederste halvdel af fasen under musen.",
-    "Procesboardets datooverskrift viser nu også ugedagen på dansk, med plads til dato, ugenummer og milepæle.",
-    "Den stiplede I dag-linje har en tydeligere rød farve i både lys og mørk tilstand.",
-    "Vælg automatisk backupoprydning efter 1 uge, 1 måned, 3 måneder, 1 år eller et selvvalgt antal dage. Tidsbaseret oprydning er fra som standard, erstatter antalgrænsen når den vælges og bevarer altid den nyeste backup. Oprydningen sker ved opstart, hver time og ved oprettelse eller visning af backups."
+    "Den stiplede I dag-linje ligger nu bag opgavekort og forbindelsesstreger, mens den fortsat er synlig over fasernes baggrund.",
+    "Den røde farve er dæmpet en smule i både lys og mørk tilstand. Linjen følger fortsat tidspunktet på dagen og holder samme synlige tykkelse ved zoom."
   ],
   "publicKey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFBMTExOTE4QzFDMTI3QTkKUldTcEo4SEJHQmtSR29NWHNITTgrMzNIZXJZckxjalh0T2ZtUEpuVFN6MmlkbThXOGNLRFJaZGwK",
-  "sha256": "e71a5baa54d60898af1d30243a294be5339131da24703055df7265bd36c85185",
-  "sourceUrl": "https://constitute-investments-appeals-bytes.trycloudflare.com/"
+  "sha256": "0f17b21fd3028a0e5764f5d0d7fb9fc49f970bc0ade716345d51bfe7a772b52b",
+  "sourceUrl": "https://donation-regular-implementing-regulation.trycloudflare.com/"
 }
