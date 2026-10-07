@@ -1,13 +1,11 @@
 {
-  "version": "1.2.10",
+  "version": "1.2.11",
   "notes": [
-    "Vælg i Indstillinger, om stakkens yderste forbindelsesstreger altid vises eller kun når stakken er markeret. Det fælles forbindelsespunkt forbliver synligt.",
-    "Forbindelsespunktet over en stak vises kun, når der er en fase over den. Det følger automatisk fasernes rækkefølge.",
-    "Kortene i Arbejdsflow bruger samme farver og overflader som Procesboard i både lys og mørk tilstand, også når farven arves fra fasen.",
-    "Mere præcise drop-indikatorer og plads til at slippe kort separat over en stak, også i øverste fase. Stakke tilbydes kun i kortets indre område under musen.",
-    "Logoet øverst til venstre får en diskret forstørrelse ved hover, mens teksten står stille."
+    "Stakke har nu et fælles indgående forbindelsespunkt til venstre med diskrete, stiplede grene fra de yderste kort, ligesom til højre.",
+    "Forbindelser mellem stakke lander på det fælles punkt. Du kan også slippe en forbindelse fra en hel stak på et hvilket som helst kort i den anden stak.",
+    "De indgående og udgående stakgrene følger indstillingen Vis altid, Kun når stakken er markeret eller Vis aldrig. Begge fælles forbindelsespunkter forbliver synlige."
   ],
   "publicKey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFBMTExOTE4QzFDMTI3QTkKUldTcEo4SEJHQmtSR29NWHNITTgrMzNIZXJZckxjalh0T2ZtUEpuVFN6MmlkbThXOGNLRFJaZGwK",
-  "sha256": "9bd9a66dc9087e54761caf6529356c217310df2d77165367406ee5a5f341eed0",
-  "sourceUrl": "https://less-constitutional-sticks-capable.trycloudflare.com/"
+  "sha256": "a2a1ac9f890290ca8f0c755f4f99c6cdc70f4adc6f4b2cbbdbb9a29ae1758349",
+  "sourceUrl": "https://railroad-attempted-dealtime-leather.trycloudflare.com/"
 }
