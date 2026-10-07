@@ -1,11 +1,11 @@
 {
-  "version": "1.2.11",
+  "version": "1.2.12",
   "notes": [
-    "Stakke har nu et fælles indgående forbindelsespunkt til venstre med diskrete, stiplede grene fra de yderste kort, ligesom til højre.",
-    "Forbindelser mellem stakke lander på det fælles punkt. Du kan også slippe en forbindelse fra en hel stak på et hvilket som helst kort i den anden stak.",
-    "De indgående og udgående stakgrene følger indstillingen Vis altid, Kun når stakken er markeret eller Vis aldrig. Begge fælles forbindelsespunkter forbliver synlige."
+    "Øverste fase viser ikke længere stakkens fælles venstre forbindelsespunkt eller indgående stakgrene.",
+    "Den ekstra venstre plads fjernes, når den ikke længere er nødvendig. Venstre fællespunkt vises kun, når en fase ovenover starter på en tidligere dato; samme dato udløser det ikke. Fasens valgte startdato bruges, ellers dens første opgaves dato.",
+    "Højre forbindelsespunkt og de eksisterende synlighedsvalg for stakgrene bevares."
   ],
   "publicKey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFBMTExOTE4QzFDMTI3QTkKUldTcEo4SEJHQmtSR29NWHNITTgrMzNIZXJZckxjalh0T2ZtUEpuVFN6MmlkbThXOGNLRFJaZGwK",
-  "sha256": "a2a1ac9f890290ca8f0c755f4f99c6cdc70f4adc6f4b2cbbdbb9a29ae1758349",
-  "sourceUrl": "https://railroad-attempted-dealtime-leather.trycloudflare.com/"
+  "sha256": "f6ce7cee61af29a655a0f295958385d36fdda4b2ef549e1f997e3fb60294df5a",
+  "sourceUrl": "https://stripes-post-limitations-freight.trycloudflare.com/"
 }
