@@ -1,13 +1,13 @@
 {
-  "version": "1.2.9",
+  "version": "1.2.10",
   "notes": [
-    "Forbindelser følger vandrette og lodrette ruter uden om opgavekortene med bløde, afrundede hjørner.",
-    "Stakkens stiplede forbindelsesgrene har et rent vinklet forløb med luft omkring kortene og fællespunktet.",
-    "Ruterne følger kortene, når de flyttes eller strækkes. Eksport bruger samme routing.",
-    "Eksport viser kun én forbindelse for samme relation mellem stakke, så billedet bliver mere overskueligt.",
-    "Ved flytning af kort viser en indikator målfasen. Faseskift følger musen og har en lille buffer ved grænsen, så kortene ikke skifter fase ved et uheld."
+    "Vælg i Indstillinger, om stakkens yderste forbindelsesstreger altid vises eller kun når stakken er markeret. Det fælles forbindelsespunkt forbliver synligt.",
+    "Forbindelsespunktet over en stak vises kun, når der er en fase over den. Det følger automatisk fasernes rækkefølge.",
+    "Kortene i Arbejdsflow bruger samme farver og overflader som Procesboard i både lys og mørk tilstand, også når farven arves fra fasen.",
+    "Mere præcise drop-indikatorer og plads til at slippe kort separat over en stak, også i øverste fase. Stakke tilbydes kun i kortets indre område under musen.",
+    "Logoet øverst til venstre får en diskret forstørrelse ved hover, mens teksten står stille."
   ],
   "publicKey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFBMTExOTE4QzFDMTI3QTkKUldTcEo4SEJHQmtSR29NWHNITTgrMzNIZXJZckxjalh0T2ZtUEpuVFN6MmlkbThXOGNLRFJaZGwK",
-  "sha256": "460fcd394e7daa541ef47de7ca68269ec5c9520ba34cfc327dc5559ba52fe607",
-  "sourceUrl": "https://invitations-aircraft-termination-recognized.trycloudflare.com/"
+  "sha256": "9bd9a66dc9087e54761caf6529356c217310df2d77165367406ee5a5f341eed0",
+  "sourceUrl": "https://less-constitutional-sticks-capable.trycloudflare.com/"
 }
