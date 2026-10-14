@@ -1,10 +1,11 @@
 {
-  "version": "1.2.14",
   "notes": [
-    "Den stiplede I dag-linje ligger nu bag opgavekort og forbindelsesstreger, mens den fortsat er synlig over fasernes baggrund.",
-    "Den røde farve er dæmpet en smule i både lys og mørk tilstand. Linjen følger fortsat tidspunktet på dagen og holder samme synlige tykkelse ved zoom."
+    "Vælg liggende 16:9 til PowerPoint, stående 3:4 eller boardets oprindelige format ved PNG- og PDF-eksport.",
+    "Eksportlayoutet tilpasser tidslinjen og pakker opgaver og faser tættere uden at strække teksten. Forhåndsvisningen viser det valgte format.",
+    "Fasefarver kan slås til og fra i eksporten, mens fasenavne og opgaver bevares."
   ],
-  "publicKey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IDFBMTExOTE4QzFDMTI3QTkKUldTcEo4SEJHQmtSR29NWHNITTgrMzNIZXJZckxjalh0T2ZtUEpuVFN6MmlkbThXOGNLRFJaZGwK",
-  "sha256": "0f17b21fd3028a0e5764f5d0d7fb9fc49f970bc0ade716345d51bfe7a772b52b",
-  "sourceUrl": "https://donation-regular-implementing-regulation.trycloudflare.com/"
+  "publicKey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEZGMUNDQjEyMUMwNjdBMzIKUldReWVnWWNFc3NjLzhENWxmWStSM0gyQ3lGdE1KZTJ1aEdYc2lJZ3J3d251OWNhdjduNmJ6aWwK",
+  "sourceUrl": "https://lottery-promptly-sharp-delete.trycloudflare.com/",
+  "version": "1.2.18",
+  "sha256": "cdcf3f1109bcde6dbfec8ec94de54f6849f0bdc873f94e457e33f68f6aecafda"
 }
