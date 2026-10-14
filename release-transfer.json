@@ -1,11 +1,12 @@
 {
-  "sourceUrl": "https://realty-orders-shopping-metro.trycloudflare.com/",
-  "notes": [
-    "Justér gitterets og forbindelsesstregernes synlighed hver for sig fra 0 til 100 % i eksportdialogen.",
-    "Forhåndsvisningen opdateres med det samme, og PNG- og PDF-eksport bruger den valgte styrke. Forbindelsespile følger stregernes synlighed.",
-    "Gitter og forbindelser kan fortsat slås helt til eller fra."
-  ],
+  "version": "1.2.20",
+  "sourceUrl": "https://pacific-accepts-cir-nickel.trycloudflare.com/",
   "publicKey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEZGMUNDQjEyMUMwNjdBMzIKUldReWVnWWNFc3NjLzhENWxmWStSM0gyQ3lGdE1KZTJ1aEdYc2lJZ3J3d251OWNhdjduNmJ6aWwK",
-  "version": "1.2.19",
-  "sha256": "fca5bf737f926c57ef78c8e5ff9b723455051821b70b18e21760c9dd1859230c"
+  "notes": [
+    "PNG-eksport gemmes altid som én PNG-fil. Store boards tilpasses automatisk i opløsning, så de ikke længere bliver til en ZIP.",
+    "Gitter og forbindelser bliver helt sorte ved 100 % synlighed i lys eksport og hvide i mørk eksport. Pilene følger samme styrke.",
+    "Fold milepælslinjen sammen eller ud. Dage, datoer og ugenumre bliver synlige; sammenfoldede milepæle vises som flag. Valget gemmes i projektet.",
+    "Knappen Ny milepæl med flagikon er altid synlig, også når linjen er sammenfoldet."
+  ],
+  "sha256": "f5ec008dfdb601ea3e7953e69ae05925ea2e37edf57132678f018495ddd7f0f4"
 }
