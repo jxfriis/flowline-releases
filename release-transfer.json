@@ -1,11 +1,11 @@
 {
+  "sourceUrl": "https://realty-orders-shopping-metro.trycloudflare.com/",
   "notes": [
-    "Vælg liggende 16:9 til PowerPoint, stående 3:4 eller boardets oprindelige format ved PNG- og PDF-eksport.",
-    "Eksportlayoutet tilpasser tidslinjen og pakker opgaver og faser tættere uden at strække teksten. Forhåndsvisningen viser det valgte format.",
-    "Fasefarver kan slås til og fra i eksporten, mens fasenavne og opgaver bevares."
+    "Justér gitterets og forbindelsesstregernes synlighed hver for sig fra 0 til 100 % i eksportdialogen.",
+    "Forhåndsvisningen opdateres med det samme, og PNG- og PDF-eksport bruger den valgte styrke. Forbindelsespile følger stregernes synlighed.",
+    "Gitter og forbindelser kan fortsat slås helt til eller fra."
   ],
   "publicKey": "dW50cnVzdGVkIGNvbW1lbnQ6IG1pbmlzaWduIHB1YmxpYyBrZXk6IEZGMUNDQjEyMUMwNjdBMzIKUldReWVnWWNFc3NjLzhENWxmWStSM0gyQ3lGdE1KZTJ1aEdYc2lJZ3J3d251OWNhdjduNmJ6aWwK",
-  "sourceUrl": "https://lottery-promptly-sharp-delete.trycloudflare.com/",
-  "version": "1.2.18",
-  "sha256": "cdcf3f1109bcde6dbfec8ec94de54f6849f0bdc873f94e457e33f68f6aecafda"
+  "version": "1.2.19",
+  "sha256": "fca5bf737f926c57ef78c8e5ff9b723455051821b70b18e21760c9dd1859230c"
 }
